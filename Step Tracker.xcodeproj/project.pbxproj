@@ -20,6 +20,7 @@
 		7BD88C142C61264100DE7D47 /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD88C132C61264100DE7D47 /* DashboardView.swift */; };
 		7BD88C162C61264300DE7D47 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7BD88C152C61264300DE7D47 /* Assets.xcassets */; };
 		7BD88C1A2C61264300DE7D47 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7BD88C192C61264300DE7D47 /* Preview Assets.xcassets */; };
+		7BF505422C63EF240045D2D1 /* StepPieChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BF505412C63EF240045D2D1 /* StepPieChart.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,7 @@
 		7BD88C152C61264300DE7D47 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7BD88C172C61264300DE7D47 /* Step_Tracker.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Step_Tracker.entitlements; sourceTree = "<group>"; };
 		7BD88C192C61264300DE7D47 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		7BF505412C63EF240045D2D1 /* StepPieChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepPieChart.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +69,7 @@
 				7B9539262C63055B00B99186 /* StepBarChart.swift */,
 				7B95392C2C6314E400B99186 /* ChartMath.swift */,
 				7B95392E2C63152600B99186 /* ChartDataTypes.swift */,
+				7BF505412C63EF240045D2D1 /* StepPieChart.swift */,
 			);
 			path = Charts;
 			sourceTree = "<group>";
@@ -220,6 +223,7 @@
 				7B95392D2C6314E400B99186 /* ChartMath.swift in Sources */,
 				7B9539252C62CA1300B99186 /* HealthMetric.swift in Sources */,
 				7B95392F2C63152600B99186 /* ChartDataTypes.swift in Sources */,
+				7BF505422C63EF240045D2D1 /* StepPieChart.swift in Sources */,
 				7B9539322C6315A600B99186 /* Date+Ext.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
