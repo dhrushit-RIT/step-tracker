@@ -41,9 +41,9 @@ import Observation
         } catch {
             
         }
-//        for steps in stepCounts.statistics() {
-//            print(steps.sumQuantity() ?? 0)
-//        }
+        //        for steps in stepCounts.statistics() {
+        //            print(steps.sumQuantity() ?? 0)
+        //        }
     }
     
     func fetchWeights() async {
@@ -66,29 +66,29 @@ import Observation
         weightData = weights.statistics().map {
             .init(date: $0.startDate, value: $0.mostRecentQuantity()?.doubleValue(for: .pound()) ?? 0)
         }
-//        for weight in weights.statistics() {
-//            print(weight.mostRecentQuantity()?.doubleValue(for: .pound()) ?? 0)
-//        }
+        //        for weight in weights.statistics() {
+        //            print(weight.mostRecentQuantity()?.doubleValue(for: .pound()) ?? 0)
+        //        }
     }
     
-//    func addSimulatorData() async {
-//        var mockSamples: [HKQuantitySample] = []
-//        
-//        for i in 0..<28 { // for 28 days
-//            let stepQuantity = HKQuantity(unit: .count(), doubleValue: .random(in: 4_000...20_000))
-//            let weightQuantity = HKQuantity(unit: .pound(), doubleValue: .random(in: 160 + Double(i/3)...165 + Double(i/3)))
-//            
-//            let startDate = Calendar.current.date(byAdding: .day, value: -i, to: .now)!
-//            let endDate = Calendar.current.date(byAdding: .second, value: 1, to: startDate)!
-//            
-//            let stepSample = HKQuantitySample(type: HKQuantityType(.stepCount), quantity: stepQuantity, start: startDate, end: endDate)
-//            let weightSample = HKQuantitySample(type: HKQuantityType(.bodyMass), quantity: weightQuantity, start: startDate, end: endDate)
-//            
-//            mockSamples.append(stepSample)
-//            mockSamples.append(weightSample)
-//        }
-//        
-//        try! await store.save(mockSamples)
-//        print("✅ Dummy data sent up")
-//    }
+    //    func addSimulatorData() async {
+    //        var mockSamples: [HKQuantitySample] = []
+    //        
+    //        for i in 0..<28 { // for 28 days
+    //            let stepQuantity = HKQuantity(unit: .count(), doubleValue: .random(in: 4_000...20_000))
+    //            let weightQuantity = HKQuantity(unit: .pound(), doubleValue: .random(in: 160 + Double(i/3)...165 + Double(i/3)))
+    //            
+    //            let startDate = Calendar.current.date(byAdding: .day, value: -i, to: .now)!
+    //            let endDate = Calendar.current.date(byAdding: .second, value: 1, to: startDate)!
+    //            
+    //            let stepSample = HKQuantitySample(type: HKQuantityType(.stepCount), quantity: stepQuantity, start: startDate, end: endDate)
+    //            let weightSample = HKQuantitySample(type: HKQuantityType(.bodyMass), quantity: weightQuantity, start: startDate, end: endDate)
+    //            
+    //            mockSamples.append(stepSample)
+    //            mockSamples.append(weightSample)
+    //        }
+    //        
+    //        try! await store.save(mockSamples)
+    //        print("✅ Dummy data sent up")
+    //    }
 }

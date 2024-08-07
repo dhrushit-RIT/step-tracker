@@ -33,7 +33,7 @@ struct HealthDataListView: View {
                 isShowingAddData = true
             }
         }
-
+        
     }
     
     var addDataView: some View {
