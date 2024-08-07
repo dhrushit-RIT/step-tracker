@@ -17,7 +17,7 @@ struct HealthkitPermissionPrimingView: View {
     
     var description = """
     This app displays your step and weight data in interacive charts.
-
+    
     You can also add new or weight data to Apple Health from this app. Your data is private and secured.
     """
     var body: some View {
@@ -39,8 +39,8 @@ struct HealthkitPermissionPrimingView: View {
             Button("Connect Apple Health") {
                 isShowingHealthkitPermissions = true
             }
-                .buttonStyle(.borderedProminent)
-                .tint(.pink)
+            .buttonStyle(.borderedProminent)
+            .tint(.pink)
         }
         .padding(30)
         .interactiveDismissDisabled()
