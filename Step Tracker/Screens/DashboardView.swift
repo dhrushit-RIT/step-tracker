@@ -9,7 +9,7 @@ import SwiftUI
 import Charts
 
 enum HealthMetricContext: CaseIterable, Identifiable {
-    case steps, weight, calories
+    case steps, weight
     
     var id: Self { self }
     
@@ -19,8 +19,6 @@ enum HealthMetricContext: CaseIterable, Identifiable {
             return "Steps"
         case .weight:
             return "Weight"
-        case .calories:
-            return "Calories"
         }
     }
 }
@@ -47,15 +45,24 @@ struct DashboardView: View {
                     }
                     .pickerStyle(.segmented)
                     
-                    StepBarChart(selectedStat: selectedStat, chartData: hkManager.stepData)
-                    
-                    StepPieChart(chartData: ChartMath.averageWeekdayCount(for: hkManager.stepData))
+                    switch selectedStat {
+                    case .steps:
+                        StepBarChart(selectedStat: selectedStat, chartData: hkManager.stepData)
+                        
+                        StepPieChart(chartData: ChartMath.averageWeekdayCount(for: hkManager.stepData))
+                    case .weight:
+                        WeightLineChart(selectedStat: .weight, chartData: hkManager.weightData)
                     }
+                }
             }
             .padding()
             .task {
+                await hkManager.fetchWeights()
                 await hkManager.fetchStepCount()
                 isShowingPermissionPrimingSheet = !hasSeenPermissionPriming
+//                if hasSeenPermissionPriming {
+//                    await hkManager.addSimulatorData()                    
+//                }
             }
             .navigationTitle("Dashboard")
             .navigationDestination(for: HealthMetricContext.self) { metric in

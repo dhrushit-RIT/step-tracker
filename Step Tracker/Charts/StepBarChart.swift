@@ -105,7 +105,7 @@ struct StepBarChart: View {
                 .foregroundStyle(.secondary)
             Text(selectedHealthMetric?.value ?? 0, format: .number.precision(.fractionLength(0)))
                 .fontWeight(.heavy)
-                .foregroundStyle(.secondary)
+                .foregroundStyle(.pink)
         }
         .padding()
         .background(
@@ -117,5 +117,5 @@ struct StepBarChart: View {
 }
 
 #Preview {
-    StepBarChart(selectedStat: .steps, chartData: HealthMetric.mockData)
+    StepBarChart(selectedStat: .steps, chartData: MockData.steps)
 }
